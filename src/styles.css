@@ -1,7 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 
   height: 100%;
+
+  background-color: rgb(32, 34, 37);
+  font-family: 'Montserrat', sans-serif;
 }

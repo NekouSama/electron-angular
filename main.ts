@@ -7,19 +7,27 @@ const args = process.argv.slice(1);
 serve = args.some(val => val === '--serve');
 
 function createWindow() {
-
   const electronScreen = screen;
-  const size = electronScreen.getPrimaryDisplay().workAreaSize;
+  // GET Full size: const size = electronScreen.getPrimaryDisplay().workAreaSize;
 
   // Create the browser window.
   win = new BrowserWindow({
+    /* GET Full size and position 0
     x: 0,
     y: 0,
     width: size.width,
     height: size.height,
+    */
     webPreferences: {
-      nodeIntegration: true,
+      nodeIntegration: true
     },
+
+    height: 500,
+    width: 940,
+    minHeight: 500, // Perfect
+    minWidth: 940, // Perfect
+    frame: false,
+    icon: `dist/angular-electron/favicon.ico`
   });
 
   if (serve) {
@@ -28,11 +36,13 @@ function createWindow() {
     });
     win.loadURL('http://localhost:4200');
   } else {
-    win.loadURL(url.format({
-      pathname: path.join(__dirname, 'dist/index.html'),
-      protocol: 'file:',
-      slashes: true
-    }));
+    win.loadURL(
+      url.format({
+        pathname: path.join(__dirname, 'dist/index.html'),
+        protocol: 'file:',
+        slashes: true
+      })
+    );
   }
 
   if (serve) {
@@ -46,11 +56,9 @@ function createWindow() {
     // when you should delete the corresponding element.
     win = null;
   });
-
 }
 
 try {
-
   // This method will be called when Electron has finished
   // initialization and is ready to create browser windows.
   // Some APIs can only be used after this event occurs.
@@ -72,7 +80,6 @@ try {
       createWindow();
     }
   });
-
 } catch (e) {
   // Catch Error
   // throw e;

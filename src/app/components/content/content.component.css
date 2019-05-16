@@ -1,0 +1,10 @@
+.main {
+  margin-left: 140px; /* Same as the width of the sidebar */
+  margin-top: 40px;
+  padding: 10px 10px;
+  position: fixed;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(47, 49, 54);
+}
