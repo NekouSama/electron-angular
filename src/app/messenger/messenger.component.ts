@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MessageModel } from './models/message.model';
 
 @Component({
   selector: 'app-messenger',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MessengerComponent implements OnInit {
 
-  texts: Array<string> = [];
+  messages: Array<MessageModel> = [];
 
   constructor() { }
 
@@ -15,7 +16,11 @@ export class MessengerComponent implements OnInit {
   }
 
   onSubmitMessage(event) {
-    this.texts.push(event.target.value);
+    const newMessage = {
+      author: 'NekouSama',
+      text: event.target.value
+    };
+    this.messages.push(newMessage);
     event.target.value = '';
   }
 
