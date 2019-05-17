@@ -21,6 +21,7 @@ import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ContentComponent } from './components/content/content.component';
+import { MessengerComponent } from './messenger/messenger.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -28,7 +29,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 }
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, WebviewDirective, HeaderComponent, SidebarComponent, ContentComponent],
+  declarations: [AppComponent, HomeComponent, WebviewDirective, HeaderComponent, SidebarComponent, ContentComponent, MessengerComponent],
   imports: [
     BrowserModule,
     FormsModule,

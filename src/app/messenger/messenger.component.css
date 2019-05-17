@@ -1,0 +1,21 @@
+.messenger {
+  border: solid red 1px;
+  background-color: bisque;
+}
+.messenger-header {
+  height: 10%;
+}
+.messenger-body {
+  height: 65%;
+}
+.messenger-input {
+  height: 15%;
+}
+.messenger-footer {
+  height: 10%;
+}
+
+.messenger-input > input {
+  height: 100%;
+  width: 100%;
+}
