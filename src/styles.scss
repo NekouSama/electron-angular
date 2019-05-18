@@ -1,0 +1,112 @@
+/* You can add global styles to this file, and also import other style files */
+$backgroundColor1: rgb(32, 34, 37);
+$backgroundColor2: rgb(47, 49, 54);
+$backgroundColor3: rgb(54, 57, 63);
+$backgroundColor4: rgb(72, 76, 82);
+$color1: rgb(133, 134, 135);
+$color2: rgb(127, 129, 134);
+$color3: white;
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  height: 100%;
+
+  background-color: $backgroundColor1;
+  font-family: 'Montserrat', sans-serif;
+}
+.titlebar {
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+  position: fixed;
+  width: 100%;
+
+  min-height: 23px;
+  padding: 10px;
+  padding-bottom: 7px;
+  z-index: 20;
+
+  font-size: 1em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $color1;
+  text-shadow: 1px 1px 2px black;
+}
+
+.titlebar-button {
+  -webkit-app-region: no-drag;
+}
+
+.close {
+  color: white;
+  margin-top: -5px;
+}
+/* The sidebar menu */
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 140px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 10; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+  margin-top: 23px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 1em;
+  color: #818181;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.content-sidebar {
+  margin-left: 80px; /* Same as the width of the sidebar */
+  margin-top: 40px;
+  padding: 10px 10px;
+  position: fixed;
+  border-top-left-radius: 10px;
+  width: 80px;
+  height: 100%;
+  background-color: $backgroundColor2;
+}
+.content {
+  margin-left: 160px; /* Same as the width of the sidebar */
+  margin-top: 40px;
+  padding: 10px 10px;
+  position: fixed;
+  width: calc(100% - 160px);
+  height: 100%;
+  background-color: $backgroundColor3;
+}
+/* MESSENGER */
+.messenger-header {
+  background-color: $backgroundColor3;
+}
+.messenger-body {
+  background-color: $backgroundColor3;
+  color: $color3;
+}
+.messenger-input {
+  background-color: $backgroundColor4;
+  color: $color3;
+  border-radius: 10px;
+  padding: 5px;
+}
+.messenger-footer {
+  background-color: $backgroundColor3;
+}
+/* HTML TAG */
+input {
+  border: none;
+}

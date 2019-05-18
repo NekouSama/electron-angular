@@ -1,5 +1,5 @@
 export interface MessageModel {
   id?: number;
-  author: string;
+  author?: string;
   text: string;
 }

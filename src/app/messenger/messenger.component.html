@@ -1,13 +1,10 @@
-<div class="messenger messenger-header">
-</div>
+<div class="messenger messenger-header"></div>
 <div class="messenger messenger-body">
   <div *ngFor="let message of messages">
-    <dl style="text-decoration: underline">{{ message.author }}:</dl>
-    <p class="margin: 0px;">{{ message.text }}</p>
+    <p class="margin: 0px;">{{ message }}</p>
   </div>
 </div>
 <div class="messenger messenger-input">
-  <input class="messenger-input" type="text" (keydown.enter)="onSubmitMessage($event)">
+  <input class="messenger-input" type="text" (keydown.enter)="onSubmitMessage($event)" />
 </div>
-<div class="messenger messenger-footer">
-</div>
+<div class="messenger messenger-footer"></div>
